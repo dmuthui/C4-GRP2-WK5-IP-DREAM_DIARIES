@@ -1,0 +1,40 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<body class="bg-light">
+    <div class="container">
+        
+        <nav class="navbar bg-dark mb-2">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light">Posts</a>
+                <form action="/search" class="d-flex" role="search">
+                    <input method="get" class="form-control me-2 " type="search" placeholder="author, id, pseudo, title" name="search">
+                    <button class="btn text-light myButtons" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+            
+        <div class="row g-1">
+            <% allBlogs.forEach((eachBlog)=>{ %>
+                <div class="card col-4 border-0 px-1">
+                    <div class="card-body bg-warning myBoxlets text-dark">
+                        <h5 class="card-title myTitles"> <%= eachBlog.title %> </h5>
+                        <hr class="text-primary mybuttons">
+                        <h6 class="card-text"><small class="text-muted">Posted: <%= eachBlog.timestamp %></small></h6>
+                        <p class="card-text text-truncate myNotes"><%= eachBlog.notes %></p>
+                        <div class="">
+                            <a class="card-link" title="Read" href = <%=''+ "read/" + eachBlog._id %>><i class="bi bi-book-half text-secondary fs-6 p-1 myIcons"></i></a> 
+                            <a class="card-link" title="Edit" href= <%=''+ "edit/" + eachBlog._id %>><i class="bi bi-pencil-square text-secondary fs-6 p-1 myIcons"></i></a> 
+                            <a class="card-link" title="Delete" href= <%=''+ "delete/" + eachBlog._id %>> <i class="bi bi-trash-fill text-secondary fs-6 p-1 myIcons"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+
+        
+
+    </div> 
+</body>
+
+<%- include('../partials/footer') %>

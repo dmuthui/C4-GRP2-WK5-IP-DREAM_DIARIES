@@ -1,0 +1,23 @@
+<form action="/write" method="post" class="row gy-3 ">
+  <legend class="display-5">Here is your Notepad</legend>
+  <hr>
+  <div class="col-6">
+    <input type="text" class="form-control myBoxlets" name="real" placeholder="Real names" aria-label="Real name">
+  </div>
+
+  <div class="col-6">
+    <input type="text" class="form-control myBoxlets" name="pseudo" placeholder="Pseudo Name" aria-label="Pseudo Name">
+  </div>
+
+  <div class="col-12">
+    <input type="text" class="form-control myBoxlets" name="title" placeholder="Title">
+  </div>
+
+  <div class="mb-2">
+    <textarea class="form-control myBoxlets" name="notes" rows="10" placeholder="Notes"></textarea>
+  </div>
+
+  <div>
+    <button class="col-12 btn btn-dark fw-semibold myButtons" type="submit" id="submitData"> <i class="bi bi-database-fill-add myIcons"></i> SUBMIT </button>
+  </div>
+</form>

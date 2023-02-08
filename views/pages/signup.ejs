@@ -1,0 +1,115 @@
+<%- include('../partials/head')  %>
+<body>
+    <section class="vh-90" style="background-color: #eee;">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+              <div class="card text-black my-3" style="border-radius: 25px;">
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-1">
+      
+                      <img src='/images/blackdreams.png' class="img-fluid" alt="Sample image">
+      
+                    </div>
+                    
+                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-2 bg-light myBoxlets">
+      
+                      <p class="text-center h1 fw-bold mb-2 mx-1 mx-md-4 mt-3 myTitles">Sign up</p>
+                      <p class="text-center mb-4 myBrand"><small class="text-muted fs-6">to your personal dream journal</small></p>
+      
+                      <form action="/signup" method="post" class="mx-1 mx-md-4">
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="text" name="firstName" class="form-control" placeholder="First Name: " />
+                          </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="text" name="secondName" class="form-control" placeholder="Second Name: " />
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="email" name ="emailAddress" class="form-control" placeholder="Email Address: " />
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password"/>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="password" name="confirmPass" class="form-control" placeholder="Confirm Password: " />
+                          </div>
+                        </div>
+      
+                        <div class="d-flex justify-content-center mx-4 mb-">
+                          <button type="submit" class="btn btn-secondary btn-lg myButtons">Register</button>
+                        </div>
+      
+                      </form>
+      
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
+
+<!-- <%- include('../partials/head') %>
+<%- include('../partials/styles') %>
+
+<body>
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+
+                                <div class="card-body p-md-3 mx-md-4">
+
+                                    <div class="text-center">
+                                        <h4 class="mt-1 mb-3 pb-1">Welcome to Dreamland</h4>
+                                    </div>
+
+                                    <%- include('../partials/toggle') %>
+                                    <%- include('../partials/signPartial') %>
+                                    
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="text-white px-3 py-2 p-md-5 mx-md-4">
+                                    <h4 class="mb-4">We are more than just a company</h4>
+                                    <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html> -->

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato:wght@300&family=Roboto:wght@300&family=Unbounded&display=swap');
+:root{
+    --primaryFont: 'Roboto', sans-serif;
+    --secondaryFont: 'Unbounded', cursive;
+    --tertiaryFont: 'Lato', sans-serif;
+    --dancingFont: 'Kaushan Script', cursive;
+
+}
+
+.myButtons,.myBoxlets, .myIcons{
+    box-shadow: -2px -2px 2px rgb(255, 255, 255, 0.3),
+                2px 2px 2px rgb(0, 0, 0, 0.4),
+                2px 2px 2px rgb(0, 0, 0, 0.4);         
+}
+
+.myButtons{
+    font-family: var(--primaryFont); 
+}
+.myTitles{
+    font-family: var(--secondaryFont);
+}
+
+.myNotes{
+    font-family: var(--tertiaryFont);
+    font-weight:bold;
+}
+.myBrand{
+    font-family: var(--dancingFont);
+}
+
+.myIcons{
+    border-radius: 45%;
+}
+
+.switches::before  {
+    background-color: black;
+}

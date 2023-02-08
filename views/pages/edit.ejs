@@ -1,0 +1,32 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<body>
+    <div class="container">
+        <div class="">
+            <form method="post" class="row gy-3" action="/edit/<%=editBlog._id %>" >
+                <div class="col-6">
+                    <input type="text" class="form-control myBoxlets" disabled name="real" placeholder="Real names" value= <%=editBlog.author %> >
+                  </div>
+              
+                  <div class="col-6">
+                    <input type="text" class="form-control myBoxlets" disabled name="pseudo" placeholder="Pseudo Name" value= <%=editBlog.pseudo %> >
+                  </div>
+
+                <div class="col-12">
+                    <input type="text" class="form-control myBoxlets" name="title" placeholder="Title" value= <%=editBlog.title %> >
+                </div>
+            
+                <div class="mb-3">
+                    <textarea class="form-control myBoxlets" name="notes" rows="15" placeholder="Notes"> <%= editBlog.notes %> </textarea>
+                </div>
+            
+                <div>
+                    <button class="col-12 btn btn-warning myButtons" type="submit" id="submitData"> <i class="bi bi-pencil-square"></i> FINISH EDIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<%- include('../partials/footer') %>

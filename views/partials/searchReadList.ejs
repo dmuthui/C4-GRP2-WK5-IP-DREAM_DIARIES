@@ -1,0 +1,29 @@
+<nav class="navbar bg-dark mb-2">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light">Posts</a>
+    <form action="/search" class="d-flex" role="search">
+      <input method="get" class="form-control me-2" type="search" placeholder="author, id, pseudo, title" name="search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="row g-2">
+  <% searchBlog.forEach(blog => { %>
+    <div class="col-sm-12">
+      <div class="card myBoxlets bg-warning border-0">
+        <div class="card-body">
+          <h5 class="card-title"> <%= blog.title %> </h5>
+          <h6 class="card-text"><small class="text-muted">Posted:<%= blog.timestamp %></small></h6>
+          <p class="card-text text-truncate"><%= blog.notes %></p>
+          <div class="">
+            <a class="card-link" title="Read" href = <%=''+ "read/" + blog._id %>><i class="bi bi-book-half text-secondary fs-6 p-1 myIcons"></i></a> 
+            <a class="card-link" title="Edit" href= <%=''+ "edit/" + blog._id %>><i class="bi bi-pencil-square text-secondary fs-6 p-1 myIcons"></i></a> 
+            <a class="card-link" title="Delete" href= <%=''+ "delete/" + blog._id %>> <i class="bi bi-trash-fill text-secondary fs-6 p-1 myIcons"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <%})%>
+ 
+</div>
+<hr>  
