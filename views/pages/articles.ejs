@@ -13,23 +13,26 @@
                 </form>
             </div>
         </nav>
-            
+        
         <div class="row g-1">
-            <% allBlogs.forEach((eachBlog)=>{ %>
-                <div class="card col-4 border-0 px-1">
-                    <div class="card-body bg-warning myBoxlets text-dark">
-                        <h5 class="card-title myTitles"> <%= eachBlog.title %> </h5>
-                        <hr class="text-primary mybuttons">
-                        <h6 class="card-text"><small class="text-muted">Posted: <%= eachBlog.timestamp %></small></h6>
-                        <p class="card-text text-truncate myNotes"><%= eachBlog.notes %></p>
-                        <div class="">
-                            <a class="card-link" title="Read" href = <%=''+ "read/" + eachBlog._id %>><i class="bi bi-book-half text-secondary fs-6 p-1 myIcons"></i></a> 
-                            <a class="card-link" title="Edit" href= <%=''+ "edit/" + eachBlog._id %>><i class="bi bi-pencil-square text-secondary fs-6 p-1 myIcons"></i></a> 
-                            <a class="card-link" title="Delete" href= <%=''+ "delete/" + eachBlog._id %>> <i class="bi bi-trash-fill text-secondary fs-6 p-1 myIcons"></i> </a>
+            <% if(allBlogs.length) { %>
+                <% allBlogs.forEach((eachBlog)=>{ %>
+                    <div class="card col-4 border-0 px-1">
+                        <div class="card-body bg-warning myBoxlets text-dark">
+                            <h5 class="card-title myTitles"> <%= eachBlog.title %> </h5>
+                            <hr class="text-primary mybuttons">
+                            <h6 class="card-text"><small class="text-muted">Posted: <%= eachBlog.timestamp %></small></h6>
+                            <p class="card-text text-truncate myNotes"><%= eachBlog.notes %></p>
+                            <div class="">
+                                <a class="card-link" title="Read" href = <%=''+ "read/" + eachBlog._id %>><i class="bi bi-book-half text-secondary fs-6 p-1 myIcons"></i></a> 
+                                <a class="card-link" title="Edit" href= <%=''+ "edit/" + eachBlog._id %>><i class="bi bi-pencil-square text-secondary fs-6 p-1 myIcons"></i></a> 
+                                <a class="card-link" title="Delete" href= <%=''+ "delete/" + eachBlog._id %>> <i class="bi bi-trash-fill text-secondary fs-6 p-1 myIcons"></i> </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <%})%>
+                <%})%>
+            <%}%>
+            <% if(!allBlogs.length) {%> <h2 class="display-1 text-secondary text-center my-5 py-3">You Currently Have no Blogs. Consider Adding Some</h2> <%}%>
         </div>
 
         

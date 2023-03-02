@@ -1,4 +1,4 @@
-# PROJECT NAMEREAM DIARIES #
+# PROJECT NAME DREAM DIARIES #
 ======================================
 #### Project description. ####
 This is a simple express CRUD app that allows the user to create notes of their dreams, read and edit and delete them when needed.
