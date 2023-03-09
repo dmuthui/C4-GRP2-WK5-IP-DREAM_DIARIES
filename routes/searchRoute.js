@@ -12,6 +12,7 @@ router.route('/')
             if(err){console.log('ERROR FINDING ALL BLOGS');}
             else{
                 let filterparam = reqQuery.filter(query=>query.title  === req.query.search || query.pseudo === req.query.search|| query.id === req.query.search || query.author === req.query.search)
+                //console.log(req.query);
                 res.render('pages/search', {searchBlog:filterparam})
             }
         
